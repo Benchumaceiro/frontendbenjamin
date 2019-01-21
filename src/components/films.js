@@ -1,36 +1,41 @@
-import React, {Component} from 'react';
-const axios = require('axios')
+import React, { Component } from 'react';
+import axios from 'axios';
+import Tarjeta from './tarjeta';
+
+  
+
+class Films extends Component {
+
+ constructor(){
+   super();
+   this.state = {
+     films: []
+   }
+ }
+
+ componentDidMount(){
+   axios.get('https://swapi.co/api/films/')
+     .then((response) => {
+       console.log(response)
+       this.setState({
+         films: response.data.results
+       })
+     }).catch((err) => {
+       console.log(err)
+     })
+ }
 
 
-export default class Tareas extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            tareas: []
-        }
-       
-    }
+ render() {
+   const films = this.state.films.map((f) => {
+     return <Tarjeta title={f.title} /> 
+   });
+   return (
+     <div className="films row">
+     {films}
+     </div>
+   );
+ }
+ }
+export default Films;
 
-    componentDidMount(){
-        console.log("cargando data de swapi")
-        axios.get('https://swapi.co/api/films')
-        .then((data) => {
-            
-            console.log(data)
-           
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-    }
-
-
-    render(){
-       /*  const tareas = this.state.tareas.map((t) => {
-            return <li key={t.id}>{t.title + " [" + (t.completed? "Completada": "No Completada") + "]"}</li>
-        }) */
-        return <div>
-    
-        </div>
-    }
-}
