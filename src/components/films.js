@@ -28,10 +28,10 @@ class Films extends Component {
 
  render() {
    const films = this.state.films.map((f) => {
-     return <Tarjeta title={f.title} /> 
+     return <Tarjeta title={f.title} opening_crawl={f.opening_crawl} director={f.director} producer={f.producer} release_date={f.release_date} episode_id={f.episode_id} /> 
    });
    return (
-     <div className="films row">
+     <div className= "films row">
      {films}
      </div>
    );

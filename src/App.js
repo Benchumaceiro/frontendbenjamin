@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import Menu from './components/Menu';
-import Peliculas from './components/peliculas';
 import Films from './components/films';
-
+import People from './components/personajes';
+import Home from './Pages/home';
+import Starships from './components/vehiculos';
+import Planets from './components/planetas';
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Menu />
-        <Films/>
-        <Route exact path="/" component={Peliculas} />
+        <div className= "container">
+        <Route path="/home" component={Home}/>
+        <Route path="/films" component={Films}/>
+        <Route path="/personajes" component={People}/>
+        <Route path="/vehiculos" component={Starships}/>
+        <Route path="/planetas" component={Planets}/>
+        </div>
       </div>
     );
   }

@@ -2,6 +2,9 @@
 
 body {
   padding-top: 54px;
+  background-image: url("/imagenes/background.jpeg"), url("/imagenes/background.jpeg");
+background-repeat: no-repeat, repeat;
+background-color: #cccccc;
 }
 
 @media (min-width: 992px) {
@@ -17,3 +20,4 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
+
