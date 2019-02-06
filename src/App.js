@@ -7,11 +7,13 @@ import People from './components/personajes';
 import Home from './Pages/home';
 import Starships from './components/vehiculos';
 import Planets from './components/planetas';
+import Tarjetascrucerosespaciales from './components/tarjetascrucerosespaciales';
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Menu />
+        <Tarjetascrucerosespaciales />
         <div className= "container">
         <Route path="/home" component={Home}/>
         <Route path="/films" component={Films}/>

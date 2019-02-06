@@ -38,6 +38,11 @@ const Menu = () => {
                 Planetas
               </Link></a>
           </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#"><Link to="/cruceros" className="nav-link text-uppercase text-expanded">
+                Cruceros Espaciales
+              </Link></a>
+              </li>
         </ul>
       </div>
     </div>
