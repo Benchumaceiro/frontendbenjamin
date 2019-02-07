@@ -7,7 +7,7 @@ const Menu = () => {
            
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div className="container">
-      <a className="navbar-brand" href="#"><Link to="/home" className="nav-link text-uppercase text-expanded">
+      <a className="navbar-brand" href="#"><Link to="/" className="nav-link text-uppercase text-expanded">
                 Star Wars
               </Link></a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

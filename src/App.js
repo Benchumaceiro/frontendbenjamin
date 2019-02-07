@@ -13,9 +13,9 @@ class App extends Component {
     return (
       <div className="App">
         <Menu />
-        <Tarjetascrucerosespaciales />
+
         <div className= "container">
-        <Route path="/home" component={Home}/>
+        <Route path="/" component={Home}/>
         <Route path="/films" component={Films}/>
         <Route path="/personajes" component={People}/>
         <Route path="/vehiculos" component={Starships}/>
